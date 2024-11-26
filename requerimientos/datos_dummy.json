@@ -1,0 +1,258 @@
+{
+    "regiones": [
+        {
+            "id": 1,
+            "nombre": "Arica y Parinacota"
+        },
+        {
+            "id": 2,
+            "nombre": "Tarapacá"
+        },
+        {
+            "id": 3,
+            "nombre": "Antofagasta"
+        },
+        {
+            "id": 4,
+            "nombre": "Atacama"
+        },
+        {
+            "id": 5,
+            "nombre": "Coquimbo"
+        },
+        {
+            "id": 6,
+            "nombre": "Valparaíso"
+        },
+        {
+            "id": 7,
+            "nombre": "Región Metropolitana de Santiago"
+        },
+        {
+            "id": 8,
+            "nombre": "O'Higgins"
+        },
+        {
+            "id": 9,
+            "nombre": "Maule"
+        },
+        {
+            "id": 10,
+            "nombre": "Ñuble"
+        },
+        {
+            "id": 11,
+            "nombre": "Biobío"
+        },
+        {
+            "id": 12,
+            "nombre": "La Araucanía"
+        },
+        {
+            "id": 13,
+            "nombre": "Los Ríos"
+        },
+        {
+            "id": 14,
+            "nombre": "Los Lagos"
+        },
+        {
+            "id": 15,
+            "nombre": "Aysén del General Carlos Ibáñez del Campo"
+        },
+        {
+            "id": 16,
+            "nombre": "Magallanes y de la Antártica Chilena"
+        }
+    ],
+    "comunas": [
+        {
+            "id": 1,
+            "nombre": "Providencia",
+            "region_id": 7
+        },
+        {
+            "id": 2,
+            "nombre": "Viña del Mar",
+            "region_id": 6
+        },
+        {
+            "id": 3,
+            "nombre": "Santiago",
+            "region_id": 7
+        },
+        {
+            "id": 4,
+            "nombre": "Valparaíso",
+            "region_id": 6
+        },
+        {
+            "id": 5,
+            "nombre": "Maipu",
+            "region_id": 7
+        }
+    ],
+    "direcciones": [
+        {
+            "id": 1,
+            "comuna_id": 1,
+            "calle": "Avenida Providencia",
+            "numero": "1234",
+            "piso": 5,
+            "departamento": 505
+        },
+        {
+            "id": 2,
+            "comuna_id": 2,
+            "calle": "Avenida Libertad",
+            "numero": "5678",
+            "piso": 10,
+            "departamento": 1010
+        },
+        {
+            "id": 3,
+            "comuna_id": 5,
+            "calle": "Avenida Siempre Viva",
+            "numero": "748"
+        }
+    ],
+    "tipos_usuario": [
+        {
+            "id": 1,
+            "nombre": "Arrendador"
+        },
+        {
+            "id": 2,
+            "nombre": "Arrendatario"
+        },
+        {
+            "id": 3,
+            "nombre": "Administrador"
+        }
+    ],
+    "usuarios": [
+        {
+            "id": 1,
+            "username": "arrendador2",
+            "first_name": "Juan",
+            "last_name": "Pérez",
+            "nombre2": "Carlos",
+            "apellido2": "González",
+            "rut": "12345678-9",
+            "direccion_id": 1,
+            "telefono": "987654321",
+            "email": "juan.perez@example.com",
+            "tipo_usuario_id": 1
+        },
+        {
+            "id": 2,
+            "username": "arrendatario1",
+            "first_name": "María",
+            "last_name": "López",
+            "nombre2": "Isabel",
+            "apellido2": "Martínez",
+            "rut": "98765432-1",
+            "direccion_id": 2,
+            "telefono": "912345678",
+            "email": "maria.lopez@example.com",
+            "tipo_usuario_id": 2
+        }
+    ],
+    "tipos_inmueble": [
+        {
+            "id": 1,
+            "nombre": "Departamento"
+        },
+        {
+            "id": 2,
+            "nombre": "Casa"
+        }
+    ],
+    "inmuebles": [
+        {
+            "id": 2,
+            "nombre": "Departamento Moderno",
+            "descripcion": "Un departamento cómodo y moderno en el centro de la ciudad.",
+            "m2_construidos": 80,
+            "m2_totales": 100,
+            "nro_est": 1,
+            "nro_hab": 2,
+            "nro_wc": 2,
+            "direccion_id": 1,
+            "comuna_id": 1,
+            "arrendador_id": 1,
+            "arrendatario_id": 2,
+            "fecha": "2024-11-17T10:00:00Z",
+            "precio": 750000.00,
+            "tipo_inmueble_id": 1,
+            "propietario_id": 1,
+            "is_disponible": true
+        },
+        {
+            "id": 3,
+            "nombre": "Casa Familiar",
+            "descripcion": "Una casa espaciosa y tranquila cerca del mar.",
+            "m2_construidos": 150,
+            "m2_totales": 200,
+            "nro_est": 2,
+            "nro_hab": 4,
+            "nro_wc": 3,
+            "direccion_id": 2,
+            "comuna_id": 2,
+            "arrendador_id": 1,
+            "arrendatario_id": 2,
+            "fecha": "2024-11-17T11:00:00Z",
+            "precio": 1200000.00,
+            "tipo_inmueble_id": 2,
+            "propietario_id": 1,
+            "is_disponible": false
+        },
+        {
+            "id": 4,
+            "nombre": "Casa Familiar",
+            "descripcion": "Una casa espaciosa y tranquila cerca del mar",
+            "m2_construidos": 150,
+            "m2_totales": 200,
+            "nro_est": 2,
+            "nro_hab": 4,
+            "nro_wc": 3,
+            "direccion_id": 3,
+            "comuna_id": 2,
+            "arrendador_id": 1,
+            "arrendatario_id": 2,
+            "fecha": "2024-11-17T11:00:00Z",
+            "precio": 1200000.00,
+            "tipo_inmueble_id": 2,
+            "propietario_id": 1,
+            "is_disponible": true
+        }
+    ]
+    ,"Foto": [
+        {
+            "id": 1,
+            "inmueble_id": 1,
+            "url": "https://placecats.com/neo_2/300/200"          
+        },
+        {
+            "id": 2,
+            "inmueble_id": 2,
+            "url": "https://placecats.com/neo_2/300/200"          
+        },
+        {
+            "id": 3,
+            "inmueble_id": 3,
+            "url": "https://placecats.com/neo_2/300/200"          
+        },
+        {
+            "id": 4,
+            "inmueble_id": 3,
+            "url": "https://placecats.com/neo_2/300/200"          
+        },
+        {
+            "id": 5,
+            "inmueble_id": 4,
+            "url": "https://placecats.com/neo_2/300/200"          
+        }
+        
+    ]
+}
