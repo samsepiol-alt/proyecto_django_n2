@@ -1,8 +1,9 @@
 import json
 from django.core.management.base import BaseCommand
 from django.contrib.auth.hashers import make_password
-from inmobiliaria.models import Region, Comuna, Direccion, TipoUsuario, Usuario, InmuebleTipo, Inmueble
+from inmobiliaria.models import Region, Comuna, Direccion, TipoUsuario, InmuebleTipo, Inmueble, Perfil
 from datetime import datetime
+from django.contrib.auth.models import User
 
 class Command(BaseCommand):
     help = "Importar datos dummy en la base de datos"
@@ -56,12 +57,18 @@ class Command(BaseCommand):
 
         # crear usuarios
         for usuario_data in data['usuarios']:
-            usuario, created = Usuario.objects.get_or_create(
-                id=usuario_data['id'],
+            usuario, created = User.objects.get_or_create(
                 username=usuario_data['username'],
                 password = make_password("python2024"),
                 first_name=usuario_data['first_name'],
-                last_name=usuario_data['last_name'],
+                last_name=usuario_data['last_name']
+            )
+            if created:
+            
+                usr = User.objects.get(id=usuario.id)
+                self.stdout.write(self.style.SUCCESS(f'Usuario "{usuario.username}" creado.'))
+            perfil, created = Perfil.objects.get_or_create(
+                usuario = usr,
                 nombre2=usuario_data['nombre2'],
                 apellido2=usuario_data['apellido2'],
                 rut=usuario_data['rut'],
@@ -71,7 +78,9 @@ class Command(BaseCommand):
                 tipo_usuario_id=usuario_data['tipo_usuario_id']
             )
             if created:
-                self.stdout.write(self.style.SUCCESS(f'Usuario "{usuario.username}" creado.'))
+                self.stdout.write(self.style.SUCCESS(f'Perfil del Usuario "{usuario.username}" creado.'))
+
+
 
         #crear tipos de inmueble
         for tipo_inmueble_data in data['tipos_inmueble']:
@@ -96,7 +105,6 @@ class Command(BaseCommand):
                 nro_wc=inmueble_data['nro_wc'],
                 direccion_id=inmueble_data['direccion_id'],
                 comuna_id=inmueble_data['comuna_id'],
-                arrendador_id=inmueble_data['arrendador_id'],
                 arrendatario_id=inmueble_data['arrendatario_id'],
                 fecha=inmueble_data['fecha'],
                 precio=inmueble_data['precio'],
@@ -108,24 +116,13 @@ class Command(BaseCommand):
                 self.stdout.write(self.style.SUCCESS(f'Inmueble "{inmueble.nombre}" creado.'))
         
 
-        #instancias para usuario
-        direccion_obj = Direccion.objects.get(id=3)  
-        tipo_usuario_obj = TipoUsuario.objects.get(id=3)  
 
         # crear superusuario
         nuevo_usuario = Usuario(
-            id = 0,#id fuera del alcance de la secuencia de usuario
             username='admin',  
             first_name='Juan',
             last_name='Perez',
-            nombre2='Antonio',
-            apellido2='Gonzalez',
-            rut='12345675-9',  
-            direccion=direccion_obj,
-            telefono='987654325',
             email='sysadmin@mail.com',  
-            tipo_usuario=tipo_usuario_obj,
-            updated_at=datetime.now(),
             is_staff =True,
             is_superuser = True
         )

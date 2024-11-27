@@ -1,6 +1,6 @@
 from django.db import models
 from django.db.models import UniqueConstraint
-from django.contrib.auth.models import User, AbstractUser, BaseUserManager
+from django.contrib.auth.models import User
 #MANAGER PARA LA CLASE BASE
 
 class ModelManager(models.Manager):
@@ -67,29 +67,16 @@ class TipoUsuario(BaseModel):
         return self.nombre
 
 
-#clase base para los usuarios
-class Usuario(AbstractUser):
-    
+
+class Perfil(BaseModel):
+    usuario = models.OneToOneField(User, on_delete=models.PROTECT)
     nombre2 = models.CharField(max_length=30, null=False, blank=True)
     apellido2 = models.CharField(max_length=30, null=False, blank=True)
     rut = models.CharField(max_length=10, unique=True, null=False, blank=False)
-    direccion = models.ForeignKey(Direccion, on_delete= models.RESTRICT)
+    direccion = models.ForeignKey(Direccion, on_delete= models.PROTECT)
     telefono = models.CharField(max_length=11,unique=True, null=False, blank=False)
     email = models.EmailField(max_length=50, unique=True)
     tipo_usuario = models.ForeignKey(TipoUsuario, on_delete=models.PROTECT)
-    updated_at = models.DateTimeField(auto_now=True)
-    
-    groups = models.ManyToManyField(
-        'auth.Group',
-        related_name='usuario_set',  # Nombre único para la relación inversa
-        blank=True
-    )
-    user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        related_name='usuario_permissions_set',  # Nombre único para la relación inversa
-        blank=True
-    )
-    
 
 
 
@@ -111,12 +98,11 @@ class Inmueble(BaseModel):
     nro_wc = models.PositiveIntegerField()
     direccion = models.OneToOneField(Direccion, on_delete=models.PROTECT)
     comuna = models.ForeignKey(Comuna, on_delete=models.PROTECT)
-    arrendador = models.ForeignKey(Usuario, related_name='anfitrion', on_delete=models.PROTECT)
-    arrendatario = models.ForeignKey(Usuario, related_name='visitante', on_delete=models.PROTECT)
+    arrendatario = models.ForeignKey(User, related_name='visitante', on_delete=models.PROTECT)
     fecha = models.DateTimeField(null = False)
     precio = models.DecimalField(max_digits=12, decimal_places=2)
     tipo_inmueble = models.ForeignKey(InmuebleTipo, on_delete=models.PROTECT)
-    propietario = models.ForeignKey(Usuario, related_name="propietario", on_delete=models.PROTECT)
+    propietario = models.ForeignKey(User, related_name="propietario", on_delete=models.PROTECT)
     is_disponible = models.BooleanField(default = True)
     #manager extra para modulo de administracion
     all_objects = AllModelManager()

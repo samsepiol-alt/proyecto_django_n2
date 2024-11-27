@@ -132,8 +132,7 @@
     ],
     "usuarios": [
         {
-            "id": 1,
-            "username": "arrendador2",
+            "username": "arrendador5",
             "first_name": "Juan",
             "last_name": "Pérez",
             "nombre2": "Carlos",
@@ -145,7 +144,6 @@
             "tipo_usuario_id": 1
         },
         {
-            "id": 2,
             "username": "arrendatario1",
             "first_name": "María",
             "last_name": "López",
@@ -170,7 +168,6 @@
     ],
     "inmuebles": [
         {
-            "id": 2,
             "nombre": "Departamento Moderno",
             "descripcion": "Un departamento cómodo y moderno en el centro de la ciudad.",
             "m2_construidos": 80,
@@ -180,7 +177,6 @@
             "nro_wc": 2,
             "direccion_id": 1,
             "comuna_id": 1,
-            "arrendador_id": 1,
             "arrendatario_id": 2,
             "fecha": "2024-11-17T10:00:00Z",
             "precio": 750000.00,
@@ -189,7 +185,6 @@
             "is_disponible": true
         },
         {
-            "id": 3,
             "nombre": "Casa Familiar",
             "descripcion": "Una casa espaciosa y tranquila cerca del mar.",
             "m2_construidos": 150,
@@ -199,7 +194,6 @@
             "nro_wc": 3,
             "direccion_id": 2,
             "comuna_id": 2,
-            "arrendador_id": 1,
             "arrendatario_id": 2,
             "fecha": "2024-11-17T11:00:00Z",
             "precio": 1200000.00,
@@ -218,7 +212,6 @@
             "nro_wc": 3,
             "direccion_id": 3,
             "comuna_id": 2,
-            "arrendador_id": 1,
             "arrendatario_id": 2,
             "fecha": "2024-11-17T11:00:00Z",
             "precio": 1200000.00,
