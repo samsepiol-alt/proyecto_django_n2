@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hito1',
+    'hito2',
     'inmobiliaria',
 ]
 
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'hito1.urls'
+ROOT_URLCONF = 'hito2.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'hito1.wsgi.application'
+WSGI_APPLICATION = 'hito2.wsgi.application'
 
 
 # Database
