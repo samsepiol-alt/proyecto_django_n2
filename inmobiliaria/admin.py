@@ -1,5 +1,5 @@
 from django.contrib import admin
-from inmobiliaria.models import Region, Comuna,Direccion,TipoUsuario,InmuebleTipo,Inmueble, Perfil
+from inmobiliaria.models import Region, Comuna,Direccion,Inmueble, Perfil
 
 
 class BaseAdmin(admin.ModelAdmin):
@@ -14,14 +14,9 @@ class BaseAdmin(admin.ModelAdmin):
 class PerfilAdmin(BaseAdmin):
     list_display_links = ('nombre',)  # Especifica qué campo será el enlace
     def nombre(self,model):
-
         return f'{model.usuario.first_name} {model.usuario.last_name}'
 
-    pass
 
-@admin.register(InmuebleTipo)
-class InmuebleTipoAdmin(BaseAdmin):
-    pass
 
 @admin.register(Comuna)
 class ComunaAdmin(BaseAdmin):
@@ -41,15 +36,9 @@ class DireccionAdmin(BaseAdmin):
         return (list_display[0],'nombre','comuna',list_display[2])
     
     def nombre(self,model):
-
         return f'{model.calle} {model.numero}'
 
     nombre.short_description="Direccion"
-
-
-@admin.register(TipoUsuario)
-class TipoUsuario(BaseAdmin):
-    pass
 
 
 @admin.register(Inmueble)
