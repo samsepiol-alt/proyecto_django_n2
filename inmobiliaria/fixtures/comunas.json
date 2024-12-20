@@ -1,0 +1,57 @@
+[
+    {
+        "model": "inmobiliaria.comuna",
+        "pk": 1,
+        "fields": {
+            "nombre": "Arica",
+            "region": 1,
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.comuna",
+        "pk": 2,
+        "fields": {
+            "nombre": "Iquique",
+            "region": 2,
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.comuna",
+        "pk": 3,
+        "fields": {
+            "nombre": "Antofagasta",
+            "region": 3,
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.comuna",
+        "pk": 4,
+        "fields": {
+            "nombre": "Calama",
+            "region": 3,
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.comuna",
+        "pk": 5,
+        "fields": {
+            "nombre": "Vallenar",
+            "region": 4,
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    }
+]

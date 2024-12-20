@@ -1,0 +1,172 @@
+[
+    {
+        "model": "inmobiliaria.region",
+        "pk": 1,
+        "fields": {
+            "nombre": "Arica y Parinacota",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 2,
+        "fields": {
+            "nombre": "Tarapacá",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 3,
+        "fields": {
+            "nombre": "Antofagasta",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 4,
+        "fields": {
+            "nombre": "Atacama",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 5,
+        "fields": {
+            "nombre": "Coquimbo",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 6,
+        "fields": {
+            "nombre": "Valparaíso",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 7,
+        "fields": {
+            "nombre": "O'Higgins",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 8,
+        "fields": {
+            "nombre": "Maule",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 9,
+        "fields": {
+            "nombre": "Ñuble",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 10,
+        "fields": {
+            "nombre": "Biobío",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 11,
+        "fields": {
+            "nombre": "La Araucanía",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 12,
+        "fields": {
+            "nombre": "Los Ríos",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 13,
+        "fields": {
+            "nombre": "Los Lagos",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 14,
+        "fields": {
+            "nombre": "Aysén del General Carlos Ibáñez del Campo",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 15,
+        "fields": {
+            "nombre": "Magallanes y de la Antártica Chilena",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 16,
+        "fields": {
+            "nombre": "Metropolitana de Santiago",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "inmobiliaria.region",
+        "pk": 17,
+        "fields": {
+            "nombre": "Libertador General Bernardo O'Higgins",
+            "is_active": true,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    }
+]
